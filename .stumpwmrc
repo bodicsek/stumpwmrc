@@ -6,14 +6,14 @@
 ;; (setf stumpwm::*debug-level* 5)
 ;; (setf *timeout-wait* 3)
 ;; (setf *debug-stream* (open "~/tmp/stumpwm.log" :direction :output :if-exists :supersede))
-(set-contrib-dir "~/projects/stumpwm-contrib")
-(set-contrib-dir "~/Dropbox/.stumpwm")
 
 ;; load what is necessary
+(set-contrib-dir "~/projects/stumpwm-contrib")
 (load-module "cpu")
 (load-module "mem")
-(load-module "dropbox")
-(load-module "pulseaudio")
+(set-contrib-dir "~/Dropbox/.stumpwm")
+;;(load-module "dropbox")
+;;(load-module "pulseaudio")
 ;;(load-module "synergyc")
 
 (load "~/.emacs.d/libraries/slime-2012-08-31/swank-loader.lisp")
