@@ -1,5 +1,8 @@
-(in-package :stumpwm)
+;;;; pulseaudio.lisp
 
+(in-package #:pulseaudio)
+
+;;; "pulseaudio" goes here. Hacks and glory await!
 
 (defun volume-get-mute ()
   (string-trim '(#\Space #\Tab #\Newline)
@@ -44,3 +47,4 @@
 	percent)))
 	
 (add-screen-mode-line-formatter #\V #'fmt-volume)
+

@@ -1,4 +1,8 @@
-(in-package :stumpwm)
+;;;; synergyc.lisp
+
+(in-package #:synergyc)
+
+;;; "synergyc" goes here. Hacks and glory await!
 
 (defcommand synergyc-start () ()
   "run synergy client"
@@ -17,5 +21,5 @@
 				    (run-shell-command "tail -n 2 ~/tmp/synergyc.log" t)))))
        0))
     
-	
 (add-screen-mode-line-formatter #\S #'fmt-synergyc)
+
