@@ -12,8 +12,8 @@
 (load-module "cpu")
 (load-module "mem")
 (set-contrib-dir "~/Dropbox/.stumpwm")
-;;(load-module "dropbox")
-;;(load-module "pulseaudio")
+(load-module "dropbox")
+(load-module "pulseaudio")
 ;;(load-module "synergyc")
 
 (load "~/.emacs.d/libraries/slime-2012-08-31/swank-loader.lisp")
