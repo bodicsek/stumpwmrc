@@ -14,6 +14,7 @@
 (set-contrib-dir "~/Dropbox/.stumpwm")
 (load-module "dropbox")
 (load-module "pulseaudio")
+(load-module "wifi-nmcli")
 ;;(load-module "synergyc")
 
 (load "~/.emacs.d/libraries/slime-2012-08-31/swank-loader.lisp")
@@ -36,6 +37,10 @@
 (defcommand chrome () ()
   "run chrome"
   (run-or-raise "google-chrome" '(:instance "google-chrome")))
+
+(defcommand conkeror () ()
+  "run conkeror"
+  (run-or-raise "conkeror" '(:instance "conkeror")))
 
 (defcommand as () ()
   "run android-studio"
@@ -61,8 +66,8 @@
 (define-key *root-map* (kbd ",") "colon")
 (define-key *root-map* (kbd "C-x") "exec sakura")
 (define-key *root-map* (kbd "x") "exec sakura")
-(define-key *root-map* (kbd "C-c") "chrome")
-(define-key *root-map* (kbd "c") "chrome")
+(define-key *root-map* (kbd "C-c") "conkeror")
+(define-key *root-map* (kbd "c") "conkeror")
 
 ;; input and message bar
 (setf *message-window-gravity* :center)
@@ -72,7 +77,7 @@
 (setf *window-format* "%m%n%s%30t")
 (setf *time-modeline-string* "%a %b %e %k:%M")
 ;;(setf *screen-mode-line-format* "[^B%n^b] | ^B%d^b | BAT: %B | VOL: %V | %c | DBOX: %D | SYGC: %S")
-(setf *screen-mode-line-format* "[^B%n^b] | ^B%d^b | VOL: %V | %c| %M| DBOX: %D")
+(setf *screen-mode-line-format* "[^B%n^b] | ^B%d^b | VOL: %V | SSID: %A | %c| %M| DBOX: %D")
 (setf *mode-line-timeout* 60)
 (enable-mode-line (current-screen) (current-head) t)
 
